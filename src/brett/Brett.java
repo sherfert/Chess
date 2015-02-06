@@ -36,7 +36,7 @@ public class Brett implements Cloneable {
 	/**
 	 * Ein Zug, mit Figur, Ausgangs- und Endfeld, und ggf. geschlagener Figur.
 	 * 
-	 * Zuege koennen ausgefuehrt znd auch wieder rueckgaengig gamcht werden.
+	 * Zuege koennen ausgefuehrt und auch wieder rueckgaengig gamcht werden.
 	 */
 	public class Zug {
 		/**
@@ -190,7 +190,7 @@ public class Brett implements Cloneable {
 			initialize();
 
 			/*
-			 * Im folgen wird auf eine moegliche eigene Schachstellung nach dem
+			 * Im folgenden wird auf eine moegliche eigene Schachstellung nach dem
 			 * Zug geprueft. In diesem Fall waere der Zug natuerlich nicht
 			 * gueltig.
 			 */
@@ -824,6 +824,7 @@ public class Brett implements Cloneable {
 		}
 
 		/*
+		 * FIXME
 		 * Wichtig, da sonst die MsgBox teilweise nicht angezeigt wird. Weiss
 		 * der Henker warum.
 		 */

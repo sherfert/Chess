@@ -40,7 +40,7 @@ public class SchachUhrThread extends Thread {
 
 	/**
 	 * Jedes mal, wenn der Timer gestartet oder fortgesetzt wird, wird dieser
-	 * Varieble auf die aktuelle Anzahl von Millisekunden gestellt.
+	 * Variable auf die aktuelle Anzahl von Millisekunden gestellt.
 	 */
 	private long startMillisekunden;
 

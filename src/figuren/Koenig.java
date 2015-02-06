@@ -45,18 +45,18 @@ public class Koenig extends Figur {
 	 * sich der Koenig zwei Felder in Richtung Turm. Dieser springt dann ueber
 	 * den Koenig auf das naechste Feld.
 	 * 
-	 * Eine Rochade kann nur dann ausgeführt werden, wenn
+	 * Eine Rochade kann nur dann ausgefÃ¼hrt werden, wenn
 	 * 
-	 * 1. der König noch nicht gezogen wurde,
+	 * 1. der KÃ¶nig noch nicht gezogen wurde,
 	 * 
 	 * 2. der beteiligte Turm noch nicht gezogen wurde,
 	 * 
-	 * 3. zwischen dem König und dem beteiligten Turm keine andere Figur steht,
+	 * 3. zwischen dem KÃ¶nig und dem beteiligten Turm keine andere Figur steht,
 	 * 
-	 * 4. der König über kein Feld ziehen muss, das durch eine feindliche Figur
+	 * 4. der KÃ¶nig  Ã¼ber kein Feld ziehen muss, das durch eine feindliche Figur
 	 * bedroht wird,
 	 * 
-	 * 5. der König vor und nach Ausführung der Rochade nicht im Schach steht,
+	 * 5. der KÃ¶nig vor und nach AusfÃ¼hrung der Rochade nicht im Schach steht,
 	 * 
 	 * 6. Turm und Koenig auf der gleichen Reihe stehen.
 	 * 

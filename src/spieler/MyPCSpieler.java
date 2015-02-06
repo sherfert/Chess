@@ -202,6 +202,7 @@ public class MyPCSpieler extends PCSpieler {
 			MainWindow.setProgress(100);
 			return;
 		}
+		
 		// Es muss mindestens noch der Folgezug betrachtet werden.
 		anzahlMoeglicherZuege = moeglicheZuege.size();
 		anzahlBetrachteterZuege = 0;
@@ -265,7 +266,7 @@ public class MyPCSpieler extends PCSpieler {
 	}
 
 	/**
-	 * Ein Thread, der Berechnungen aus h�chster Ebene ausfuehrt. Gedacht fuer
+	 * Ein Thread, der Berechnungen aus höchster Ebene ausfuehrt. Gedacht fuer
 	 * Aufteilung der Rechnung auf mehrere Threads.
 	 */
 	private class MyPCSpielerThread extends Thread {
@@ -381,14 +382,15 @@ public class MyPCSpieler extends PCSpieler {
 		 * @param tiefe
 		 *            Wie viele Schritte in die Berechnung einfliessen sollen
 		 * @param alpha
-		 *            Alpha-Grenze, bei initialem Aufruf theoretisch -undenlich
+		 *            Alpha-Grenze, bei initialem Aufruf theoretisch -unendlich
 		 * @param beta
-		 *            Beta-Grenze, bei initialem Aufruf theoretisch +undenlich
+		 *            Beta-Grenze, bei initialem Aufruf theoretisch +unendlich
 		 * @param my
 		 *            Ob gerade die eigenen (true) oder die gegnerischen (false)
 		 *            besten Zuege berechnet werden sollen.
 		 * @return die Wertigkeit des besten Zuges oder null bei einem beta-cut
 		 */
+		
 		private Integer besterZug(int tiefe, int alpha, int beta, boolean my) {
 			Integer result = -100000;
 			// Wenn das Spiel zu Ende ist, sollte nichts mehr geprueft werden.
@@ -423,6 +425,8 @@ public class MyPCSpieler extends PCSpieler {
 					// Gleich gute Stellung, Remis waere also "egal"
 					return 0;
 				}
+			case NORMAL:
+				break;
 			}
 
 			if (tiefe == 0) {

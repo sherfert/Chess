@@ -101,7 +101,7 @@ public class Spieler {
 		JRadioButton turmButton = new JRadioButton("Turm");
 		turmButton.setActionCommand("Turm");
 
-		JRadioButton laeuferButton = new JRadioButton("Läufer");
+		JRadioButton laeuferButton = new JRadioButton("Lï¿½ufer");
 		laeuferButton.setActionCommand("Laeufer");
 
 		JRadioButton springerButton = new JRadioButton("Springer");
@@ -120,7 +120,7 @@ public class Spieler {
 		panel.add(laeuferButton);
 		panel.add(springerButton);
 
-		Object[] paneContent = new Object[] { "Bitte wählen sie eine Figur:",
+		Object[] paneContent = new Object[] { "Bitte wÃ¤hlen sie eine Figur:",
 				panel };
 
 		// Fragedialog anzeigen

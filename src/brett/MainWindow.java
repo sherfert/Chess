@@ -11,8 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.io.File;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Hashtable;
 
@@ -38,7 +36,6 @@ import javax.swing.SpinnerNumberModel;
 
 import spieler.MyPCSpieler;
 import spieler.Spieler;
-import figuren.Figur;
 import figuren.Figur.Farbe;
 
 /**
@@ -172,7 +169,7 @@ public class MainWindow extends JFrame {
 		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.X_AXIS));
 
 		// Brett erzeugen
-		contentPane.add(brettPanel = new BrettPanel()); // TODO test
+		contentPane.add(brettPanel = new BrettPanel());
 		brett = brettPanel.getBrett();
 
 		JPanel sidePanel = new JPanel();
@@ -208,10 +205,10 @@ public class MainWindow extends JFrame {
 	}
 
 	/**
-	 * Die Men�zeile des Hauptfensters erzeugen.
+	 * Die Menüzeile des Hauptfensters erzeugen.
 	 * 
 	 * @param fenster
-	 *            Das Fenster, in das die Men�zeile eingef�gt werden soll.
+	 *            Das Fenster, in das die Menüzeile eingefügt werden soll.
 	 */
 	private void menuezeileErzeugen(JFrame fenster) {
 		JMenuBar menuezeile = new JMenuBar();
@@ -220,7 +217,7 @@ public class MainWindow extends JFrame {
 		JMenu menue;
 		JMenuItem eintrag;
 
-		// Das Datei-Men� erzeugen
+		// Das Datei-Menü erzeugen
 		menue = new JMenu("Spiel");
 
 		eintrag = new JMenuItem("Neues Spiel");
@@ -497,7 +494,6 @@ public class MainWindow extends JFrame {
 			sound.stop();
 		}
 		URL u = MainWindow.class.getResource("/sound/" + name + "." + audioEnding);
-		File f = new File(dir + sep + "sound" + sep + name + "." + audioEnding);
 		sound = Applet.newAudioClip(u);
 		if (sound != null) {
 			sound.play();
