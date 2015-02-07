@@ -176,7 +176,7 @@ public class Brett implements Cloneable {
 		}
 
 		/**
-		 * @return ob es sich um einen gueltigen Zug handelt. Die Prüfung muss
+		 * @return ob es sich um einen gueltigen Zug handelt. Die PrÃ¼fung muss
 		 *         dann erfolgen, wenn die Figurenkonstellation auf dem Brett
 		 *         auch die gewuenschte fuer die Ausfuehrung ist.
 		 */
@@ -918,7 +918,7 @@ public class Brett implements Cloneable {
 	
 	/**
 	 * Klont ein Brett. Der Klon ist mit keinem BrettPanel verbunden und darf daher
-	 * auch nur für Berechnungen (von PC-Gegnern) benutzt werden. Es werden 2 neue
+	 * auch nur fÃ¼r Berechnungen (von PC-Gegnern) benutzt werden. Es werden 2 neue
 	 * Spieler erstellt und alle derzeit auf dem Brett befindlichen Figuren geklont.
 	 */
 	@Override
