@@ -124,6 +124,8 @@ public class BrettPanel extends JPanel {
 					Zug zug = brett.new Zug(selektiertePosition, clickedPos);
 					if (zug.istGueltig()) {
 						zug.fuehreAus(true);
+						// Ggf. PC-Gegner benachrichtigen, dass er dran ist.
+						brett.spielerDerFarbe(brett.aktuelleFarbe()).notifyTurn();
 					} else {
 						MainWindow.playSound("Aktion_verboten");
 					}

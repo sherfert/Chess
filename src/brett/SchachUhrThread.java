@@ -72,8 +72,8 @@ public class SchachUhrThread extends Thread {
 	/**
 	 * @param brett
 	 * 			  Das Brett des SchachUhrThreads
-	 * @param minuten
-	 *            Die Minuten, auf die diese Schachuhr gestellt werden soll.
+	 * @param millisekunden
+	 *            Die Millisekunden, auf die diese Schachuhr gestellt werden soll.
 	 * @param farbe
 	 *            Die Farbe des Spielers der Schachuhr.
 	 * @param anzeige
@@ -82,11 +82,11 @@ public class SchachUhrThread extends Thread {
 	 *            Ob die Schachuhr direkt mit Starten des Threads mitgestartet
 	 *            werden soll
 	 */
-	public SchachUhrThread(Brett brett, int minuten, Farbe farbe, JLabel anzeige,
+	public SchachUhrThread(Brett brett, long millisekunden, Farbe farbe, JLabel anzeige,
 			boolean startetLaufend) {
 		super();
 		this.brett = brett;
-		this.millisekunden = 60000 * minuten;
+		this.millisekunden = millisekunden;
 		this.farbe = farbe;
 		this.anzeige = anzeige;
 		this.startetLaufend = startetLaufend;
@@ -95,6 +95,13 @@ public class SchachUhrThread extends Thread {
 		// Britische Zeit setzen, da System.currentTimeMillis davon ausgeht
 		cal.setTimeZone(TimeZone.getTimeZone("GMT"));
 		refreshTime();
+	}
+
+	/**
+	 * @return die verbleibenden Millisekunden des Timers.
+	 */
+	public long getMillisekunden() {
+		return millisekunden;
 	}
 
 	/**

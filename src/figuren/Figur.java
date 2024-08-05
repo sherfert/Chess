@@ -13,7 +13,7 @@ import brett.Position;
  * Eine Schachfigur
  */
 public abstract class Figur implements Cloneable {
-	public enum Farbe {
+	public static enum Farbe {
 		WEISS, SCHWARZ;
 
 		public Farbe andereFarbe() {
@@ -51,7 +51,7 @@ public abstract class Figur implements Cloneable {
 	/**
 	 * Das Brett, auf dem die Figur steht.
 	 */
-	protected Brett brett; //TODO
+	protected Brett brett;
 
 	/**
 	 * @param position
